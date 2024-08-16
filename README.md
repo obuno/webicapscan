@@ -123,8 +123,8 @@ I would highly recommend you to add/test the following unofficial ClamAV databas
 
 - [ ] c-icap -- run as non-root user (currently root).
 - [ ] python/pip -- implement .venv
-- [x] squidclamav -- implement SquidClamAV as an ICAP service -- DONE 11.08.2024
-- [x] webicapscan.py -- provide a fallback to the default ```localhost``` ICAP configuration -- DONE 15.08.2024
+- [x] squidclamav -- implement SquidClamAV as an ICAP service -- 👍 11.08.2024
+- [x] webicapscan.py -- provide a fallback to the default ```localhost``` ICAP configuration -- 👍 15.08.2024
 - [ ] webicapscan.py -- run as non-root user (currently root).
 - [ ] webicapscan.py -- enable SSL/TLS remote ICAP servers (currently possible using clear text submissions).
 - [ ] webicapscan.py -- flask app would benefit from python knowledgeable people / working but perhaps messy and dirty.
