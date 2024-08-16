@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" href="{{url_for('static', filename='images/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>ICAP Web Scanner</title>
+  </head>
+  <script>
+    function iFrameOn() {
+      icapscan_iframe.document.designMode = 'On';
+      icapscan_iframe.document.body.style.fontFamily = 'Courier New', Courier, monospace;
+    }
+  </script>
+  <body>
+    <div class="iscan"><p class="titlebtn titlebtn3" onclick="window.open('/about', '_blank');">----== ICAP Web Scanner | {{ revisions }} ==----</p></div>
+    <hr>
+    <div class="iscan-small">{{ infotext1 }}</div>
+    <div class="iscan-small">{{ infotext2 }}</div>    
+    <hr>
+    <div style="float:left;">        
+      <button class="dropbtn-big" onclick="window.open('/icapconfig', '_blank');">ICAP Configuration</button>
+    </div>
+    <div style="float:left;">
+       <form id="fileUploadForm" action="{{ url_for('upload_sample', file=file) }}" enctype="multipart/form-data" method="POST" target="icapscan_iframe">
+          <input class="dropbtn" value="Upload a File" type="file" name="file" onchange="fileUploadForm.submit()">
+        </form>
+    </div>
+    <br>
+    <br>    
+    <hr>
+    <div class="iscan-small">
+        <iframe class="iframe" id="icapscan_iframe" name="icapscan_iframe" allowtransparency="true" onLoad="iFrameOn()">
+          Sorry your browser does not support inline frames.
+        </iframe>
+    </div>
+    <br>
+   <hr>
+  </body>
+</html>

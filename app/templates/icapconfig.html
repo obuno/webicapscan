@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" href="{{url_for('static', filename='images/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    </style>
+    <title>ICAP Configuration</title>
+  </head>
+  <body>
+    <div class="iscan"><p class="titlebtn titlebtn3">----== ICAP Configuration ==----</p></div>
+    <hr>
+    <div class="iscan-small">{{ configtext1 }}</div>
+    <hr>
+    <div class="group">
+      <section>
+        <form method="POST" action="{{ url_for('icapconfig') }}">
+          <p><input type="text" placeholder="ICAP Config Name" name="icapConfigName" width="150px"></p>
+          <p><input type="text" placeholder="ICAP Server IP" name="icapServer"></p>
+          <p><input type="text" placeholder="ICAP Service Port" name="icapPort"></p>
+          <p><input type="text" placeholder="ICAP Service Name (srv_clamav, respmod etc...)"  name="icapService"></p>
+          <input class="dropbtn-big" type="submit" value="Save/Apply">
+        </form>
+      </section>
+      <section2>
+        <div class="dtitlebtn titlebtn6">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            <div class="dropbtn-small">Current ICAP Configuration:</div>
+            <div class="dropbtn-small">===========================</div>      
+              {% for message in messages %}
+                <div class="dropbtn-small">{{ message }}</div>  
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% endwith %}
+        </div>
+      </section2>
+      <section3>
+          <div class="dropdown">    
+            <button class="dropbtn-big">Load ICAP Configuration</button>
+              <div class="dropdown-content">
+                {% for config in icapUserConfigs %}
+                  <form id="icapUserConfigForm" action="{{ url_for('icapconfig', loadUserConfig=config) }}" method="POST">
+                    <button class="dropbtn-big" name="{{ (config) }}" type="submit">{{ (config) }}</button>
+                  </form>
+                {% endfor %}
+              </div>
+          </div>
+      </section3>
+    </div>         
+  </body>
+</html>

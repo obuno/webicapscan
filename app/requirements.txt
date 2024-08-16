@@ -1,0 +1,7 @@
+eventlet
+Flask
+gunicorn
+shelljob
+pandas
+pathlib
+Werkzeug

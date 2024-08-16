@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" href="{{url_for('static', filename='images/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    </style>
+    <title>ICAP Web Scanner</title>
+  </head>
+  <body>
+    <div class="iscan">
+      <p class="iscan-small-red">----== ICAP Web Scanner | Error 400 ==----</p>
+    </div>
+    <hr>
+    <h2 class="iscan-small">File Upload NOT Allowed</h2>
+    <hr>
+    <form>
+     <input type="button" value="Go back!" onclick="history.back()">
+    </form>
+  </body>
+</html>

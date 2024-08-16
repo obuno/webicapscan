@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" href="{{url_for('static', filename='images/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    </style>
+    <title>About: ICAP Web Scanner</title>
+  </head>
+  <body>
+    <div class="iscan"><p class="titlebtn titlebtn3">----== ICAP Web Scanner ==----</p></div>
+    <hr>
+    <div class="iscan-small">{{ aboutext1 }}</div>
+    <hr>
+    <div>
+        <p>A few notes:</p>
+        <div class="about">-- The scan process is handled by the c-icap-client, which per default send's submissions to the local (127.0.0.1:1344) c-icap/clamav server</div>
+        <div class="about">-- The bundled ICAP Client/Server are part of the c-icap open-source project.<a target="_blank" href="https://c-icap.sourceforge.net/">https://c-icap.sourceforge.net/</a></div>
+	<div class="about">-- ClamAV® is an open-source antivirus engine for detecting trojans, viruses, malware & other malicious threats.<a target="_blank" href="https://www.clamav.net">https://www.clamav.net</a></div>
+        <div class="about">-- When your submission are returned with a clean verdict; you'll see such information: No modification needed (Allow 204 response).</div>
+    </div>
+  </body>
+</html>    
