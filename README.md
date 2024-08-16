@@ -78,7 +78,7 @@ cd webicapscan
 The needed specific information's resides in line #13 of the [newborn_webicapscan.sh](https://github.com/obuno/webicapscan/blob/main/newborn_webicapscan.sh) file:   
 
 ```
-doker container create --name webicapscan -p [docker-host-ip]:5000:5000 --dns [local-or-public-dns-server-ip] -v [/path/to/the/clamav/databases]:/var/lib/clamav -it webicapscan:latest
+doker container create --name webicapscan -p [docker-host-ip]:5000:5000 --dns [dns-server-ip] -v [/path/to/the/clamav/databases]:/var/lib/clamav -it webicapscan:latest
 ```
 
 Settings                      | Explanation
