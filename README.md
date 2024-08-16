@@ -83,7 +83,7 @@ doker container create --name webicapscan -p [docker-host-ip]:5000:5000 --dns [l
 
 - **docker-host-ip** = on which Docker Host present IP address you'll want to expose your container.
 - **local-or-public-dns-server-ip** = A working DNS server IP address, either local or over The Internet.
-- **/path/to/the/clamav/databases** = A directory on your Docker Host where the ClamAV & 3rd parties Databases will be downloaded initially (at container 1st boot) and stored as well as updated hourly. Providing this placeholder will assure that you can destroy your container while keeping all the downloaded databases in the occurrence of a new webicapscan container deployment.
+- **/path/to/the/clamav/databases** = A directory on your Docker Host where the ClamAV & 3rd parties Databases will be downloaded to initially at container first boot as well as updated hourly. Providing that placeholder will assure that you can destroy the webicapscan container while keeping all the downloaded databases in the occurrence of a new/fresh webicapscan container deployment.
 
 Once the above information's have been updated, you can run the script with: 
 
