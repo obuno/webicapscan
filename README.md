@@ -87,7 +87,9 @@ Parameter     | Explanation
 [local-or-public-dns-server-ip]  | A working DNS server IP address, either local or over The Internet.
 [/path/to/the/clamav/databases] | A directory on your Docker Host where the ClamAV & 3rd parties Databases will be downloaded to initially at container first boot as well as updated hourly.
 
-Providing the Docker Host directory for your webicapscan container volume will assure that you can destroy the webicapscan container while keeping all the downloaded databases in the occurrence of a new/fresh webicapscan container deployment. Once these above information's have been updated, you can run the script with: 
+Providing the Docker Host directory for your webicapscan container volume will assure that you can destroy the webicapscan container while keeping all the downloaded databases in the occurrence of a new/fresh webicapscan container deployment.   
+
+Once these above information's have been updated, you can run the script with: 
 
 ```
 bash newborn_webicapscan.sh
