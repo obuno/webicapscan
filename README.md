@@ -81,10 +81,10 @@ The needed specific information's resides in line #13 of the [newborn_webicapsca
 doker container create --name webicapscan -p [docker-host-ip]:5000:5000 --dns [local-or-public-dns-server-ip] -v [/path/to/the/clamav/databases]:/var/lib/clamav -it webicapscan:latest
 ```
 
-Parameter     | Explanation
-------------- | -------------
-docker-host-ip  | on which Docker Host present IP address you'll want to expose your container.
-local-or-public-dns-server-ip  | A working DNS server IP address, either local or over The Internet.
+Settings                      | Explanation
+----------------------------- | -------------
+docker-host-ip                | on which Docker Host present IP address you'll want to expose your container.
+local-or-public-dns-server-ip | A working DNS server IP address, either local or over The Internet.
 /path/to/the/clamav/databases | A directory on your Docker Host where the ClamAV & 3rd parties Databases will be downloaded to initially at container first boot as well as updated hourly.
 
 Providing the Docker Host directory for your webicapscan container volume will assure that you can destroy the webicapscan container while keeping all the downloaded databases in the occurrence of a new/fresh webicapscan container deployment.   
