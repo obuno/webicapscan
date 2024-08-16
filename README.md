@@ -57,21 +57,21 @@ The ICAP configuration page (letting you address different ICAP enabled systems)
 
 ## Deploying the webicapscan container in your environment: 
 
-### Create a directory and switch to it
+### Create a directory and switch to it:
 
 ```
 mkdir -p /local/github
 cd /local/github
 ```
 
-### Clone the repository and switch to it
+### Cloning the repository and switch to it:
 
 ```
 git clone https://github.com/obuno/webicapscan
 cd webicapscan
 ```
 
-### Build and run the image
+### Build and run the image:
 
 **You can use the included [newborn_webicapscan.sh](https://github.com/obuno/webicapscan/blob/main/newborn_webicapscan.sh) shell script to deploy/compile everything needed at once. You will need to adapt and update that file in regards to your own environment (IP addresses/bound port/container volume configuration etc.) before running it.**  
 
