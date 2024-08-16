@@ -82,7 +82,7 @@ doker container create --name webicapscan -p [docker-host-ip]:5000:5000 --dns [d
 ```
 
 Settings                      | Explanation
------------------------------ | -------------
+----------------------------- | -----------------------------
 docker-host-ip                | on which Docker Host present IP address you'll want to expose your container.
 dns-server-ip                 | A working DNS server IP address, either local or over The Internet.
 /path/to/the/clamav/databases | A directory on your Docker Host where the ClamAV & 3rd parties Databases will be downloaded to initially at container first boot as well as updated hourly.
