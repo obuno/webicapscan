@@ -5,9 +5,9 @@
 The idea of this project is to create a Docker Container which will let you instantly scan any wanted contents from a Web Based Front-End:   
 
 - [c-icap server](https://github.com/c-icap/c-icap-server) acting as our ICAP content adaptation service.
+- [SquidClamAV](https://squidclamav.darold.net/) as our local ICAP service.
 - [ClamAV](https://github.com/Cisco-Talos/clamav) as our backend AntiVirus scanning engine upon ICAP submissions.
 - The [ClamAV official signatures databases](https://lists.clamav.net/pipermail/clamav-virusdb/).
-- [SquidClamAV](https://squidclamav.darold.net/) as our local ICAP service.
 - 3rd party unofficial ClamAV signatures databases enhancing our detection capabilities.
 - Network reachable 3rd party ICAP/AV Server can be addressed (currently in clear text).
 
