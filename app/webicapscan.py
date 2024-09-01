@@ -112,7 +112,7 @@ def upload_sample():
                         if 'status:204' in line:
                             yield line.rstrip() + '<b><br/>\n'
                             pass
-                        elif 'ISTag:' in line:
+                        elif 'X-Virus-ID' in line:
                             yield line.rstrip() + '<b><br/>\n'
                             pass
                         else:
@@ -128,7 +128,7 @@ def upload_sample():
                         if 'status:204' in line:
                             yield line.rstrip() + '<b><br/>\n'
                             pass
-                        elif 'ISTag:' in line:
+                        elif 'X-Virus-ID' in line:
                             yield line.rstrip() + '<b><br/>\n'
                             pass
                         else:
