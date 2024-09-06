@@ -94,6 +94,18 @@ dns-server-ip                 | A working DNS server IP address, either local or
 
 Providing the Docker Host directory for your webicapscan container volume will assure that you can destroy the webicapscan container while keeping all the downloaded databases in the occurrence of a new/fresh webicapscan container deployment.   
 
+Note that you "could" expose the ICAP TCP:1344 port if you so want, thus enabling native ICAP services on your container.
+The configuration needed for that would look like this:
+```
+docker container create \
+  --name webicapscan \
+  -p [docker-host-ip]:1344:1344 \  
+  -p [docker-host-ip]:5000:5000 \
+  --dns [dns-server-ip] \
+  -v [/path/to/the/clamav/databases]:/var/lib/clamav \
+  -it webicapscan:latest
+```
+
 Once these above information's have been updated, you can run the script with: 
 
 ```
