@@ -5,6 +5,7 @@
 The idea of this project is to create a Docker Container which will let you instantly scan any wanted contents from a Web Based Front-End:   
 
 - [c-icap server](https://github.com/c-icap/c-icap-server) acting as our ICAP content adaptation service.
+- [c-icap client](https://github.com/c-icap/c-icap-server) acting as our ICAP content submitter.
 - [SquidClamAV](https://squidclamav.darold.net/) as our local ICAP service.
 - [ClamAV](https://github.com/Cisco-Talos/clamav) as our backend AntiVirus scanning engine upon ICAP submissions.
 - The [ClamAV official signatures databases](https://lists.clamav.net/pipermail/clamav-virusdb/).
@@ -38,7 +39,7 @@ The idea of this project is to create a Docker Container which will let you inst
 The aims of ```webicapscan``` are:
 
 - Provide a Web front-end in order to AV scan contents on the fly.
-- Provide a local combo of ClamAV/ClamD/SquidClamAV/c-icap/c-icap-client, hence letting you conduct scans locally from the Web front-ned.
+- Provide a local combo of ClamAV/ClamD/SquidClamAV/c-icap/c-icap-client, hence letting you conduct scans locally from the Web front-end.
 - Provide a possibility to address other/further ICAP Servers possibly present on your network.
 
 **A few notes before you start:**
